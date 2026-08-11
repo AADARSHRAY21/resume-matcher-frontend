@@ -1,7 +1,7 @@
-import Login from "./pages/Login";
+import JdUpload from "./pages/JdUpload";
 
 function App() {
-  return <Login />;
+  return <JdUpload />;
 }
 
 export default App;
