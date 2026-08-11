@@ -1,7 +1,7 @@
-import JdUpload from "./pages/JdUpload";
+import MatchAnalyze from "./pages/MatchAnalyze";
 
 function App() {
-  return <JdUpload />;
+  return <MatchAnalyze />;
 }
 
 export default App;
