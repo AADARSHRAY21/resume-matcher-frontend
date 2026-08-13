@@ -1,4 +1,17 @@
 :root {
+  [data-theme='light'] {
+  --bg-void: #F7F8FA;
+  --bg-panel: #FFFFFF;
+  --bg-panel-hover: #F1F2F5;
+  --line: #E1E4EA;
+  --signal: #6D4FE0;
+  --signal-hover: #5B3FC7;
+  --match: #1FA664;
+  --gap: #E14C4C;
+  --text: #12151C;
+  --text-muted: #5B6178;
+  }
+
   --bg-void: #0A0C10;
   --bg-panel: #12151C;
   --bg-panel-hover: #171B24;
@@ -42,6 +55,7 @@ body {
   font-family: var(--font-body);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1, h2, h3, h4 {
