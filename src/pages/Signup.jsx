@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import api from "../api/axiosConfig";
 import Card from "../components/ui/Card.jsx";
 import Input from "../components/ui/Input.jsx";
@@ -7,19 +8,18 @@ import Button from "../components/ui/Button.jsx";
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
-    setResult(null);
     setLoading(true);
     try {
       const response = await api.post("/auth/signup", { email, password });
-      setResult(response.data);
       localStorage.setItem("token", response.data.token);
+      navigate("/resume-upload");
     } catch (err) {
       setError(err.response?.data?.message || "Signup failed");
     } finally {
@@ -50,11 +50,6 @@ function Signup() {
             {loading ? "Creating account..." : "Sign Up"}
           </Button>
         </form>
-        {result && (
-          <pre className="bg-void border border-line rounded-md p-3 text-xs font-mono text-match overflow-x-auto">
-            {JSON.stringify(result, null, 2)}
-          </pre>
-        )}
         {error && <p className="text-sm text-gap">{error}</p>}
       </Card>
     </div>
