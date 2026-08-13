@@ -4,17 +4,21 @@ import Card from "../components/ui/Card.jsx";
 import Textarea from "../components/ui/Textarea.jsx";
 import Button from "../components/ui/Button.jsx";
 import Loader from "../components/ui/Loader.jsx";
+import MatchResultsKeyword from "../components/results/MatchResultsKeyword.jsx";
+import MatchResultsAI from "../components/results/MatchResultsAI.jsx";
 
 function MatchAnalyze() {
   const [resumeText, setResumeText] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [result, setResult] = useState(null);
+  const [resultType, setResultType] = useState(null); // 'keyword' | 'ai'
   const [error, setError] = useState(null);
   const [loadingType, setLoadingType] = useState(null); // 'keyword' | 'ai' | null
 
   const runAnalysis = async (endpoint, type) => {
     setError(null);
     setResult(null);
+    setResultType(null);
 
     if (!resumeText.trim() || !jobDescription.trim()) {
       setError("Both resume text and job description are required");
@@ -25,6 +29,7 @@ function MatchAnalyze() {
     try {
       const response = await api.post(endpoint, { resumeText, jobDescription });
       setResult(response.data);
+      setResultType(type);
     } catch (err) {
       setError(err.response?.data?.message || err.response?.data || "Match analysis failed");
     } finally {
@@ -74,11 +79,18 @@ function MatchAnalyze() {
           </Button>
         </div>
 
+        {result && resultType === "keyword" && <MatchResultsKeyword data={result} />}
+        {result && resultType === "ai" && <MatchResultsAI data={result} />}
+
         {result && (
-          <pre className="bg-void border border-line rounded-md p-3 text-xs font-mono text-match whitespace-pre-wrap break-words max-h-96 overflow-y-auto">
-            {JSON.stringify(result, null, 2)}
-          </pre>
+          <details className="text-xs">
+            <summary className="cursor-pointer text-text-muted hover:text-text">Raw response</summary>
+            <pre className="bg-void border border-line rounded-md p-3 mt-2 font-mono text-match whitespace-pre-wrap break-words max-h-72 overflow-y-auto">
+              {JSON.stringify(result, null, 2)}
+            </pre>
+          </details>
         )}
+
         {error && (
           <p className="text-sm text-gap">
             {typeof error === "string" ? error : JSON.stringify(error)}
