@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import api from "../api/axiosConfig";
 import Card from "../components/ui/Card.jsx";
 import Input from "../components/ui/Input.jsx";
@@ -51,6 +51,13 @@ function Login() {
           </Button>
         </form>
         {error && <p className="text-sm text-gap">{error}</p>}
+                <p className="text-sm text-text-muted text-center">
+          Don't have an account?{" "}
+          <Link to="/signup" className="text-signal hover:underline">
+            Sign up
+          </Link>
+        </p>
+        
       </Card>
     </div>
   );
