@@ -19,7 +19,10 @@ function App() {
           <Route path="/jd-upload" element={<JdUpload />} />
           <Route path="/match" element={<MatchAnalyze />} />
         </Route>
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/" element={ localStorage.getItem("token") ? (
+          <Navigate to="/resume-upload" replace /> ) : (
+           <Navigate to="/signup" replace /> )}
+        />
       </Routes>
     </BrowserRouter>
   );
