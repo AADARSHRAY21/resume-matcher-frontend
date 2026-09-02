@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        
         <Route element={<ProtectedLayout />}>
           <Route path="/resume-upload" element={<ResumeUpload />} />
           <Route path="/jd-upload" element={<JdUpload />} />
