@@ -5,7 +5,7 @@ import FeatureGrid from '../components/landing/FeatureGrid';
 
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-bg-base">
+    <div className="min-h-screen bg-void">
       <LandingNav />
       <Hero />
       <WhySection />

@@ -43,21 +43,21 @@ export default function FeatureGrid() {
         {features.map(({ icon: Icon, title, description, large, badge }, i) => (
           <div
             key={title}
-            className={`bg-bg-surface border border-hairline rounded-lg p-6 ${
+            className={`bg-panel border border-line rounded-lg p-6 ${
               large ? 'md:col-span-2 md:row-span-1' : ''
             }`}
           >
             <div className="flex items-start justify-between">
-              <div className="w-10 h-10 rounded-md bg-accent-match/10 flex items-center justify-center">
-                <Icon size={20} className="text-accent-match" />
+              <div className="w-10 h-10 rounded-md bg-match/10 flex items-center justify-center">
+                <Icon size={20} className="text-match" />
               </div>
               {badge && (
-                <span className="text-xs px-2 py-1 rounded-md bg-accent-gap/10 text-accent-gap border border-accent-gap/20">
+                <span className="text-xs px-2 py-1 rounded-md bg-gap/10 text-gap border border-gap/20">
                   {badge}
                 </span>
               )}
             </div>
-            <h3 className="mt-4 font-display font-semibold text-lg text-text-primary">
+            <h3 className="mt-4 font-display font-semibold text-lg text-text">
               {title}
             </h3>
             <p className="mt-2 text-sm text-text-muted leading-relaxed">

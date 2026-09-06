@@ -1,7 +1,7 @@
 export default function WhySection() {
   return (
-    <section className="max-w-3xl mx-auto px-6 md:px-12 py-16 md:py-24 text-center font-body">
-      <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary leading-tight">
+    <section id="why" className="max-w-3xl mx-auto px-6 md:px-12 py-16 md:py-24 text-center font-body">
+  <h2 className="font-display font-bold text-3xl md:text-4xl text-text leading-tight">
         We turn a job description into a checklist.
       </h2>
       <p className="mt-4 text-lg text-text-muted">
