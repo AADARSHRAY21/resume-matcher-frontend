@@ -38,7 +38,7 @@ const features = [
 
 export default function FeatureGrid() {
   return (
-    <section className="max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-28 font-body">
+    <section  id="features" className="max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-28 font-body">
       <div className="grid md:grid-cols-3 gap-4">
         {features.map(({ icon: Icon, title, description, large, badge }, i) => (
           <div
