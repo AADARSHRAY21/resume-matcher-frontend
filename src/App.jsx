@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import ThemeToggle from "./components/ThemeToggle.jsx";
 import ProtectedLayout from "./components/ProtectedLayout.jsx";
 import Landing from "./pages/Landing.jsx";
@@ -8,10 +8,13 @@ import ResumeUpload from "./pages/ResumeUpload.jsx";
 import JdUpload from "./pages/JdUpload.jsx";
 import MatchAnalyze from "./pages/MatchAnalyze.jsx";
 
-function App() {
+function AppShell() {
+  const location = useLocation();
+  const hideGlobalToggle = location.pathname === "/";
+
   return (
-    <BrowserRouter>
-      <ThemeToggle />
+    <>
+      {!hideGlobalToggle && <ThemeToggle />}
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
@@ -33,6 +36,14 @@ function App() {
           }
         />
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
     </BrowserRouter>
   );
 }

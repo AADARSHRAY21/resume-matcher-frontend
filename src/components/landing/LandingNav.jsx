@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ThemeToggle from "../ThemeToggle";
 
 export default function LandingNav() {
   return (
@@ -8,13 +9,13 @@ export default function LandingNav() {
       </Link>
 
       <div className="hidden sm:flex items-center gap-2">
-          <a
+        <a
           href="#why"
           className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
         >
           Why
         </a>
-          <a
+        <a
           href="#features"
           className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
         >
@@ -22,7 +23,8 @@ export default function LandingNav() {
         </a>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-3">
+        <ThemeToggle className="w-9 h-9 flex items-center justify-center rounded-md border border-line bg-panel text-base cursor-pointer transition-colors hover:bg-panel-hover hover:border-signal" />
         <Link
           to="/login"
           className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
