@@ -8,19 +8,31 @@ export default function LandingNav() {
         ResumeMatch
       </Link>
 
-      <div className="hidden sm:flex items-center gap-2">
+      <div className="hidden md:flex items-center gap-2">
         <a
-          href="#why"
+          href="/#why"
           className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
         >
           Why
         </a>
         <a
-          href="#features"
+          href="/#features"
           className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
         >
           Features
         </a>
+        <Link
+          to="/resume-guide"
+          className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
+        >
+          Resume Guide
+        </Link>
+        <Link
+          to="/layoffs-tracker"
+          className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
+        >
+          Layoffs Tracker
+        </Link>
       </div>
 
       <div className="flex items-center gap-3">

@@ -7,10 +7,14 @@ import Signup from "./pages/Signup.jsx";
 import ResumeUpload from "./pages/ResumeUpload.jsx";
 import JdUpload from "./pages/JdUpload.jsx";
 import MatchAnalyze from "./pages/MatchAnalyze.jsx";
+import ResumeGuide from "./pages/ResumeGuide.jsx";
+import LayoffsTracker from "./pages/LayoffsTracker.jsx";
+
+const PUBLIC_MARKETING_PATHS = ["/", "/resume-guide", "/layoffs-tracker"];
 
 function AppShell() {
   const location = useLocation();
-  const hideGlobalToggle = location.pathname === "/";
+  const hideGlobalToggle = PUBLIC_MARKETING_PATHS.includes(location.pathname);
 
   return (
     <>
@@ -18,6 +22,8 @@ function AppShell() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/resume-guide" element={<ResumeGuide />} />
+        <Route path="/layoffs-tracker" element={<LayoffsTracker />} />
 
         <Route element={<ProtectedLayout />}>
           <Route path="/resume-upload" element={<ResumeUpload />} />
