@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, ScanSearch, Target, Bot, BookOpen, TrendingDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import FadeInSection from "../motion/FadeInSection";
 
 const tools = [
   { icon: ScanSearch, label: 'ATS Resume Checker', href: '#features' },
@@ -11,7 +12,7 @@ const tools = [
 
 export default function Hero() {
   return (
-    
+    <FadeInSection>
     <section className="max-w-5xl mx-auto px-6 md:px-12 pt-24 md:pt-32 pb-16 md:pb-20 text-center font-body">
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-panel border border-line text-xs text-text-muted mb-6">
         <Sparkles size={14} className="text-signal" />
@@ -68,6 +69,10 @@ export default function Hero() {
           )
         )}
       </div>
+      
+    
+  
     </section>
+    </FadeInSection>
   );
 }
