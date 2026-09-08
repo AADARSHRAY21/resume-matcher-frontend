@@ -1,4 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import MotionButton from "./motion/MotionButton";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -20,12 +21,12 @@ export default function Navbar() {
         <NavLink to="/jd-upload" className={linkClass}>Job Description</NavLink>
         <NavLink to="/match" className={linkClass}>Match</NavLink>
       </div>
-      <button
+      <MotionButton
         onClick={handleLogout}
         className="px-3 py-2 rounded-md text-sm font-medium text-gap hover:bg-panel-hover transition-colors"
       >
         Log Out
-      </button>
+      </MotionButton>
     </nav>
   );
 }

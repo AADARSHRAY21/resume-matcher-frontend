@@ -1,6 +1,7 @@
 import { ArrowRight, Sparkles, ScanSearch, Target, Bot, BookOpen, TrendingDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FadeInSection from "../motion/FadeInSection";
+import MotionLink from "../motion/MotionLink";
 
 const tools = [
   { icon: ScanSearch, label: 'ATS Resume Checker', href: '#features' },
@@ -31,13 +32,14 @@ export default function Hero() {
       </p>
 
       <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <Link
+      <MotionLink
+        
           to="/signup"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-signal hover:bg-signal-hover text-white font-medium transition-colors"
         >
           Get started free
           <ArrowRight size={18} />
-        </Link>
+        </MotionLink>
         <a
           href="#why"
           className="px-6 py-3 rounded-md border border-line text-text hover:bg-panel transition-colors font-medium"
