@@ -1,4 +1,6 @@
 import { Sparkles, Search, FileText, Download, Lock, Code2 } from 'lucide-react';
+import StaggerContainer from '../motion/StaggerContainer';
+import StaggerItem from '../motion/StaggerItem';
 
 const features = [
   {
@@ -38,10 +40,10 @@ const features = [
 
 export default function FeatureGrid() {
   return (
-    <section  id="features" className="max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-28 font-body">
-      <div className="grid md:grid-cols-3 gap-4">
-        {features.map(({ icon: Icon, title, description, large, badge }, i) => (
-          <div
+    <section id="features" className="max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-28 font-body">
+      <StaggerContainer className="grid md:grid-cols-3 gap-4">
+        {features.map(({ icon: Icon, title, description, large, badge }) => (
+          <StaggerItem
             key={title}
             className={`bg-panel border border-line rounded-lg p-6 ${
               large ? 'md:col-span-2 md:row-span-1' : ''
@@ -63,9 +65,9 @@ export default function FeatureGrid() {
             <p className="mt-2 text-sm text-text-muted leading-relaxed">
               {description}
             </p>
-          </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </section>
   );
 }
