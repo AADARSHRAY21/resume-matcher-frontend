@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle";
 import NavDropdown from "./NavDropdown";
 import FeaturesPanel from "./FeaturesPanel";
+import GuidesPanel from "./GuidesPanel";
 
 export default function LandingNav() {
   return (
@@ -20,12 +21,9 @@ export default function LandingNav() {
         <NavDropdown label="Features" width={880}>
   {(close) => <FeaturesPanel onNavigate={close} />}
 </NavDropdown>
-        <Link
-          to="/resume-guide"
-          className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
-        >
-          Resume Guide
-        </Link>
+        <NavDropdown label="Resume Guides" width={820}>
+  {(close) => <GuidesPanel onNavigate={close} />}
+</NavDropdown>
         <Link
           to="/layoffs-tracker"
           className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
