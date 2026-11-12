@@ -14,7 +14,7 @@ export default function GuidesPanel({ onNavigate }) {
           {guideMenu.byBackground.map((g) => (
             <Link
               key={g.id}
-              to={`/resume-guide#${g.id}`}
+              to={`/resume-guide/${g.id}`}
               onClick={onNavigate}
               className="flex flex-col min-h-[150px] rounded-xl border border-line bg-panel-hover/40 p-4 transition-colors hover:border-signal"
             >
@@ -35,7 +35,7 @@ export default function GuidesPanel({ onNavigate }) {
           {guideMenu.more.map((g) => (
             <li key={g.id}>
               <Link
-                to={`/resume-guide#${g.id}`}
+                to={`/resume-guide/${g.id}`}
                 onClick={onNavigate}
                 className="flex items-center gap-3 rounded-md px-2 py-2 text-sm text-text-muted transition-colors hover:bg-panel-hover hover:text-text"
               >
