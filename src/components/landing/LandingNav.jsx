@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle";
+import NavDropdown from "./NavDropdown";
 
 export default function LandingNav() {
   return (
@@ -15,12 +16,9 @@ export default function LandingNav() {
         >
           Why
         </a>
-        <a
-          href="/#features"
-          className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
-        >
-          Features
-        </a>
+        <NavDropdown label="Features">
+  <div className="p-6 text-text">Panel works</div>
+</NavDropdown>
         <Link
           to="/resume-guide"
           className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
