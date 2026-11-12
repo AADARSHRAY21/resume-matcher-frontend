@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle";
 import NavDropdown from "./NavDropdown";
+import FeaturesPanel from "./FeaturesPanel";
 
 export default function LandingNav() {
   return (
@@ -16,8 +17,8 @@ export default function LandingNav() {
         >
           Why
         </a>
-        <NavDropdown label="Features">
-  <div className="p-6 text-text">Panel works</div>
+        <NavDropdown label="Features" width={880}>
+  {(close) => <FeaturesPanel onNavigate={close} />}
 </NavDropdown>
         <Link
           to="/resume-guide"
