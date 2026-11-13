@@ -4,6 +4,7 @@ import api from "../api/axiosConfig";
 import Card from "../components/ui/Card.jsx";
 import Input from "../components/ui/Input.jsx";
 import Button from "../components/ui/Button.jsx";
+import PageTransition from "../components/motion/PageTransition";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -28,6 +29,7 @@ function Signup() {
   };
 
   return (
+    <PageTransition>
     <div className="min-h-screen flex items-center justify-center p-4">
       <Card className="w-full max-w-sm flex flex-col gap-5">
         <h2 className="text-2xl">Sign Up</h2>
@@ -53,12 +55,13 @@ function Signup() {
         {error && <p className="text-sm text-gap">{error}</p>}
                 <p className="text-sm text-text-muted text-center">
           Already have an account?{" "}
-          <Link to="/login" className="text-signal hover:underline">
+          <Link to="/login" className="text-signal hover:text-signal-hover underline-offset-4 hover:underline transition-colors">
             Log in
           </Link>
         </p>
       </Card>
     </div>
+    </PageTransition>
   );
 }
 

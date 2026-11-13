@@ -5,7 +5,9 @@ export default function Input({ label, error, className = '', ...props }) {
         <label className="text-sm font-medium text-text-muted">{label}</label>
       )}
       <input
-        className={`px-3.5 py-2.5 rounded-md bg-panel border ${error ? 'border-gap' : 'border-line'} text-text placeholder:text-text-muted focus:outline-none focus:border-signal transition-colors ${className}`}
+        className={`px-3.5 py-2.5 rounded-md bg-panel border ${
+          error ? 'border-gap' : 'border-line hover:border-text-muted'
+        } text-text placeholder:text-text-muted focus:outline-none focus:border-signal focus:ring-2 focus:ring-signal/25 transition-[border-color,box-shadow] duration-200 ${className}`}
         {...props}
       />
       {error && <span className="text-xs text-gap">{error}</span>}

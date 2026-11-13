@@ -3,6 +3,7 @@ import ThemeToggle from "../ThemeToggle";
 import NavDropdown from "./NavDropdown";
 import FeaturesPanel from "./FeaturesPanel";
 import GuidesPanel from "./GuidesPanel";
+import MotionLink from "../motion/MotionLink";
 
 export default function LandingNav() {
   return (
@@ -34,18 +35,22 @@ export default function LandingNav() {
 
       <div className="flex items-center gap-3">
         <ThemeToggle className="w-9 h-9 flex items-center justify-center rounded-md border border-line bg-panel text-base cursor-pointer transition-colors hover:bg-panel-hover hover:border-signal" />
-        <Link
-          to="/login"
-          className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
-        >
-          Log in
-        </Link>
-        <Link
-          to="/signup"
-          className="px-4 py-2 rounded-md text-sm font-medium bg-signal hover:bg-signal-hover text-white transition-colors"
-        >
-          Get started
-        </Link>
+        <MotionLink
+  to="/login"
+  whileHover={{ scale: 1.04 }}
+  whileTap={{ scale: 0.96 }}
+  className="px-3 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text transition-colors"
+>
+  Log in
+</MotionLink>
+<MotionLink
+  to="/signup"
+  whileHover={{ scale: 1.04 }}
+  whileTap={{ scale: 0.96 }}
+  className="px-4 py-2 rounded-md text-sm font-medium bg-signal hover:bg-signal-hover text-white transition-colors"
+>
+  Get started
+</MotionLink>
       </div>
     </nav>
   );
