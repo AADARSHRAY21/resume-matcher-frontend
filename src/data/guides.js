@@ -305,6 +305,133 @@ export const guides = [
       "Read aloud once to catch typos",
     ],
   },
+    {
+    slug: "teacher",
+    icon: "🍎",
+    title: "Teacher Resume",
+    tagline: "Show results in the classroom, not just the subjects you teach",
+    whoFor:
+      "School teachers (primary, secondary and senior secondary), subject specialists and early-career teachers applying to CBSE, ICSE, state-board and international schools.",
+    format:
+      "Single column, PDF export. One page up to about 5 years of experience, two pages beyond that. Plain headings and a standard font. Add a photo only if the school's application asks for one.",
+    sections: [
+      { name: "Header", note: "Name, phone, email, city. LinkedIn is optional." },
+      { name: "Summary", note: "Two lines: your subjects, the classes and board you teach, your years of experience and one concrete strength." },
+      { name: "Qualifications & licences", note: "Goes near the top because schools screen for it first: B.Ed, TET or CTET with status, and your subject degree." },
+      { name: "Teaching experience", note: "Reverse-chronological. For each role, name the school, board, classes, subjects and class size, then your results." },
+      { name: "Skills", note: "Grouped (Curriculum & assessment, Classroom, Digital tools) and worded the way school postings word them." },
+      { name: "Education", note: "Degree, university, year. One or two lines each." },
+      { name: "Achievements & activities", note: "Awards, training programmes, and co-curricular roles such as club in-charge, house master or exam coordinator." },
+    ],
+    mustInclude: [
+      "Teaching eligibility with its status (B.Ed, TET or CTET qualified, year)",
+      "Subjects, classes and board stated plainly (for example Mathematics, Classes 9-10, CBSE)",
+      "Class size or total students taught",
+      "Student outcomes: pass percentage, average score improvement, remedial results",
+      "Curriculum and assessment experience (lesson planning, formative assessment, board exam duty)",
+      "Digital tools you use in class (Google Classroom, smart board, online assessment tools)",
+      "Co-curricular and pastoral roles, plus recent professional development",
+    ],
+    examples: [
+      {
+        before: "Taught maths to class 9 and 10.",
+        after: "Taught Mathematics to 140 students across Classes 9 and 10 (CBSE) and raised the board-exam class average from 68% to 76% in two years through weekly diagnostic tests and revision groups.",
+      },
+      {
+        before: "Good at classroom management.",
+        after: "Managed classes of 40+ with a clear rules-and-routines system, and cut late homework submissions by about a third within one term.",
+      },
+      {
+        before: "Used technology in teaching.",
+        after: "Moved weekly assignments to Google Classroom and made short concept videos, lifting on-time submission from 70% to 92%.",
+      },
+    ],
+    mistakes: [
+      "Leaving out TET or CTET status, or the year you qualified. It is often the first thing a school checks.",
+      "Listing subjects without the classes and board, so the school cannot place your level.",
+      "Describing duties with no student results at all.",
+      "Trait phrases like \"dedicated and passionate\" in place of evidence.",
+      "Including student names, photos or any identifying details in examples.",
+    ],
+    keywords: [
+      "Lesson planning", "Curriculum design", "Classroom management", "Differentiated instruction",
+      "Formative assessment", "Student engagement", "Remedial teaching", "CBSE",
+      "NEP 2020", "Google Classroom", "Parent communication", "Co-curricular activities",
+    ],
+    checklist: [
+      "Licence or eligibility status is visible near the top",
+      "Subjects, classes and board are stated for every role",
+      "At least two bullets show student results with numbers",
+      "Skills match the school posting's wording (only ones you truly have)",
+      "No student-identifying details anywhere",
+      "One to two pages, exported as PDF",
+      "Read aloud once to catch typos",
+    ],
+  },
+
+  {
+    slug: "executive",
+    icon: "📈",
+    title: "Executive Resume",
+    tagline: "Lead with business impact, scope and strategy",
+    whoFor:
+      "Directors, VPs, general managers and C-suite leaders, typically with 12+ years of experience, applying for senior leadership or board-level roles.",
+    format:
+      "Single column, PDF export, two pages (three only for very long careers). Plain headings and a standard font. Recruiters and search firms scan the top third of page one, so everything critical goes there.",
+    sections: [
+      { name: "Header", note: "Name, city, phone, email, LinkedIn. No full address, photo or date of birth." },
+      { name: "Executive summary", note: "Three or four lines: your level, industry, the scale you operate at (revenue, team size) and the kind of leadership you bring." },
+      { name: "Core competencies", note: "8-12 keywords in a compact block that mirrors the target role's language." },
+      { name: "Career highlights", note: "3-4 headline results with numbers (revenue, margin, cost, growth, turnaround), placed before the job history." },
+      { name: "Professional experience", note: "Reverse-chronological. Each role starts with a scope line (P&L, headcount, regions), then results-led bullets. Detail the last 10-15 years and compress older roles to one line each." },
+      { name: "Education & credentials", note: "Degrees, executive programmes and certifications. Keep it short." },
+      { name: "Board roles & affiliations", note: "Board seats, advisory roles and industry bodies, if relevant to the target role." },
+    ],
+    mustInclude: [
+      "Scope numbers: P&L or revenue size, team size, regions or business units",
+      "Headline results with figures (growth, margin, cost saved, turnaround)",
+      "Your target title and industry stated in the summary",
+      "Strategic outcomes (turnaround, market entry, M&A, transformation), not task lists",
+      "Leadership proof: leaders you built or promoted, and who you reported to or advised (board, investors)",
+      "Detail for the last 10-15 years only",
+      "Board seats and professional affiliations, when you have them",
+    ],
+    examples: [
+      {
+        before: "Responsible for overseeing operations across regions.",
+        after: "Led operations for 4 regions with a ₹420 Cr P&L and 1,200 staff, lifting EBITDA margin from 9% to 14% in three years.",
+      },
+      {
+        before: "Managed a team of managers.",
+        after: "Built and developed a 12-person leadership team; 4 members were promoted to VP-level roles within three years.",
+      },
+      {
+        before: "Helped the company expand.",
+        after: "Launched operations in 3 new states in 18 months, adding ₹95 Cr in annual revenue with break-even at month 14.",
+      },
+    ],
+    mistakes: [
+      "Listing duties and responsibilities instead of business results.",
+      "Leaving out scope numbers, so the reader cannot judge the size of your role.",
+      "Running to four or more pages by describing every job since graduation in full.",
+      "Opening with an objective statement instead of an executive summary.",
+      "Heavy design, graphics or photos that confuse parsers and add nothing.",
+    ],
+    keywords: [
+      "P&L management", "Strategic planning", "Revenue growth", "Digital transformation",
+      "Change management", "Operational excellence", "Stakeholder management", "Board reporting",
+      "M&A integration", "Talent development", "Cost optimisation", "Go-to-market",
+    ],
+    checklist: [
+      "Scope numbers appear in the first third of page one",
+      "Executive summary names your level, industry and scale",
+      "Career highlights come before the job history",
+      "Every role has a scope line and results with numbers",
+      "Two pages, exported as PDF",
+      "Competencies match the target role's wording",
+      "LinkedIn headline and dates match the resume",
+    ],
+  },
 ];
 
 export const getGuide = (slug) => guides.find((g) => g.slug === slug);
