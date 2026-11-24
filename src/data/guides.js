@@ -182,6 +182,129 @@ export const guides = [
       "LinkedIn headline matches the resume",
     ],
   },
+    {
+    slug: "engineering",
+    icon: "⚙️",
+    title: "Engineering Resume",
+    tagline: "Show what you designed, built and improved, with numbers",
+    whoFor:
+      "Engineers in core disciplines (mechanical, electrical, electronics, civil) with 0-8 years of experience, applying for design, production, maintenance or site roles.",
+    format:
+      "Single column, reverse-chronological, PDF export. One page up to about 5 years of experience, two pages beyond that. Plain headings and a standard font so parsers can read every section.",
+    sections: [
+      { name: "Header", note: "Name, email, phone, city, LinkedIn. Add a portfolio or GitHub link only if it shows real design or project work." },
+      { name: "Summary", note: "Two or three lines: your discipline, years of experience, your strongest tools and the kind of role you want." },
+      { name: "Technical skills", note: "Group by type (Design software, Analysis, Manufacturing or Site, Standards) and match the posting's exact tool names." },
+      { name: "Experience", note: "Reverse-chronological. Each bullet should show what you did, the scale and the result." },
+      { name: "Projects", note: "Academic or personal projects with real constraints. Essential for freshers; keep to 1-2 for experienced engineers." },
+      { name: "Education", note: "Degree, college, year, CGPA if strong. One or two lines." },
+      { name: "Certifications & licences", note: "Six Sigma, PMP, PLC training, safety certificates, professional registration. Only the ones that match the job." },
+    ],
+    mustInclude: [
+      "Your discipline and target role stated in the summary",
+      "Software and tools named exactly (SolidWorks, AutoCAD, ANSYS, MATLAB, PLC) with the level you really have",
+      "Quantified results: cost saved, time cut, defect rate, yield, tolerance achieved",
+      "Scale of the work: budget, team size, units produced or project size",
+      "Standards and methods you applied (ISO 9001, GD&T, FMEA, Lean) where relevant",
+      "Certifications and licences with the issuer",
+    ],
+    examples: [
+      {
+        before: "Responsible for design of components.",
+        after: "Designed 14 sheet-metal brackets in SolidWorks to a tolerance of ±0.2 mm, cutting per-unit material cost by 9%.",
+      },
+      {
+        before: "Worked on quality improvement.",
+        after: "Led a root-cause analysis (5-Why, Pareto) on a recurring weld defect and reduced rejection from 6% to 2.5% in one quarter.",
+      },
+      {
+        before: "Did site supervision.",
+        after: "Supervised a 20-person crew on a 3-storey RCC building and handed it over on schedule with zero lost-time incidents.",
+      },
+    ],
+    mistakes: [
+      "Listing duties (\"responsible for...\") instead of results.",
+      "A long software list with no indication of how well you use each tool.",
+      "Leaving out scale. \"Designed a part\" says little; \"designed 14 parts for a 5,000-unit run\" says a lot.",
+      "Generic claims like \"team player\" instead of showing a project you delivered with a team.",
+      "Mid-career resumes that still give half a page to college projects.",
+    ],
+    keywords: [
+      "CAD", "SolidWorks", "AutoCAD", "FEA", "GD&T", "Root cause analysis",
+      "Lean manufacturing", "Six Sigma", "PLC", "ISO 9001", "Project management", "MATLAB",
+    ],
+    checklist: [
+      "Discipline and target role appear in the summary",
+      "Tool names match the job posting's wording",
+      "Every experience bullet has a number or a clear outcome",
+      "Standards and certifications are listed with issuers",
+      "Length fits your experience (1-2 pages), exported as PDF",
+      "File named FirstName_LastName_Resume.pdf",
+      "Read aloud once to catch typos",
+    ],
+  },
+
+  {
+    slug: "nursing",
+    icon: "🩺",
+    title: "Nursing Resume",
+    tagline: "Lead with your licence, then show clinical depth",
+    whoFor:
+      "Registered nurses, GNM and B.Sc nursing graduates, and nursing students applying for hospital, clinic and community health roles.",
+    format:
+      "Single column, PDF export. One page for new graduates, up to two for experienced nurses. Plain headings, standard font, no photo unless the application asks for one.",
+    sections: [
+      { name: "Header", note: "Name, phone, email, city. Add your registration number only if the employer asks for it." },
+      { name: "Summary", note: "Two lines: your specialty, years of experience and the kind of unit or role you want." },
+      { name: "Licence & certifications", note: "Goes near the top because it is a hard requirement: council registration with status, BLS/ACLS and other certificates with dates." },
+      { name: "Clinical experience", note: "Reverse-chronological. For each role, name the unit type, bed count and patient load, then your results." },
+      { name: "Skills", note: "Clinical skills and systems, grouped (Procedures, Monitoring, Documentation) using the posting's wording." },
+      { name: "Education", note: "Degree or diploma, institution, year. New graduates: list clinical placements here or under experience." },
+    ],
+    mustInclude: [
+      "Licence or council registration with its current status",
+      "BLS, ACLS or other certificates with issue or expiry dates",
+      "Unit type and scale: ICU, ward, 30 beds, patients per shift",
+      "Clinical procedures and equipment you handle (IV cannulation, ventilator care, wound care)",
+      "EMR or hospital systems you have used",
+      "Outcomes where true: errors reduced, staff trained, audits passed",
+    ],
+    examples: [
+      {
+        before: "Took care of patients in ICU.",
+        after: "Provided bedside care for 4 ventilated patients per shift in a 20-bed medical ICU, monitoring vitals and titrating infusions per physician orders.",
+      },
+      {
+        before: "Helped improve patient safety.",
+        after: "Introduced a bedside medication double-check on the ward, helping bring reported medication errors down from 5 to 1 per quarter.",
+      },
+      {
+        before: "Trained new staff.",
+        after: "Precepted 6 new graduate nurses through a 4-week orientation covering documentation and shift handover.",
+      },
+    ],
+    mistakes: [
+      "Not stating licence status or leaving out certificate dates, which is often the first thing screened.",
+      "Listing duties without the unit, bed count or patient load that show your level.",
+      "Including any patient information. Keep every example anonymous.",
+      "Vague traits like \"caring and compassionate\" instead of evidence.",
+      "Skipping the EMR and hospital systems you have used.",
+    ],
+    keywords: [
+      "Patient assessment", "Medication administration", "IV therapy", "Wound care",
+      "Infection control", "Electronic health records", "BLS", "ACLS",
+      "Patient education", "Triage", "Care planning",
+    ],
+    checklist: [
+      "Licence status and certificate dates are visible",
+      "Each role names the unit type and patient load",
+      "Bullets show outcomes, not only duties",
+      "No patient identifiers anywhere",
+      "Skills match the posting's wording (only ones you truly have)",
+      "One to two pages, exported as PDF",
+      "Read aloud once to catch typos",
+    ],
+  },
 ];
 
 export const getGuide = (slug) => guides.find((g) => g.slug === slug);

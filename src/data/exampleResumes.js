@@ -238,4 +238,161 @@ export const exampleResumes = {
       },
     ],
   },
+     engineering: {
+    name: "Rohan Das",
+    contact: [
+      "Bangalore, India",
+      "rohan.das@example.com",
+      "+91 90000 55566",
+      "linkedin.com/in/rohan-das-example",
+      "github.com/rohan-example",
+    ],
+    sections: [
+      {
+        type: "text",
+        title: "Summary",
+        text: "Final-year Computer Science Engineering student with a 3-month backend internship and 2 deployed projects. Strong in Java, Spring Boot and REST API design; looking for a junior backend or software engineer role.",
+      },
+      {
+        type: "skills",
+        title: "Technical Skills",
+        groups: [
+          { label: "Languages", items: ["Java", "JavaScript", "SQL"] },
+          { label: "Backend", items: ["Spring Boot", "Node.js", "REST APIs", "JWT authentication"] },
+          { label: "Databases", items: ["PostgreSQL", "MongoDB"] },
+          { label: "Tools", items: ["Git", "Docker (basics)", "Postman", "Maven"] },
+          { label: "Core CS", items: ["Data structures", "Algorithms", "OOP", "DBMS", "Operating systems"] },
+        ],
+      },
+      {
+        type: "entries",
+        title: "Experience",
+        items: [
+          {
+            heading: "Backend Developer Intern",
+            sub: "Sample Tech Pvt Ltd (Remote)",
+            period: "Jun – Aug 2025",
+            bullets: [
+              "Built 6 REST endpoints in Express.js for the order module and cut average response time by trimming redundant database queries.",
+              "Fixed 15+ API and data-validation bugs across weekly sprints and added tests for the payment flow.",
+              "Wrote API documentation used by the frontend team to integrate 4 new screens.",
+            ],
+          },
+        ],
+      },
+      {
+        type: "entries",
+        title: "Projects",
+        items: [
+          {
+            heading: "Resume Matcher",
+            sub: "Java, Spring Boot, PostgreSQL, React",
+            period: "2025",
+            bullets: [
+              "Built a full-stack app that scores a resume against a job description, with PDF parsing and JWT-secured endpoints.",
+              "Designed the PostgreSQL schema and 10+ REST endpoints; deployed the frontend on Vercel.",
+            ],
+          },
+          {
+            heading: "Library Management System",
+            sub: "Java, MySQL",
+            period: "2024",
+            bullets: [
+              "Implemented book issue, return and fine calculation with a normalised schema of 6 tables.",
+              "Covered the core service layer with JUnit tests.",
+            ],
+          },
+        ],
+      },
+      {
+        type: "entries",
+        title: "Education",
+        items: [
+          {
+            heading: "B.Tech, Computer Science & Engineering",
+            sub: "Sample Academy of Technology",
+            period: "2022 – 2026",
+            bullets: ["CGPA: 8.2/10"],
+          },
+        ],
+      },
+      {
+        type: "entries",
+        title: "Certifications",
+        items: [
+          { heading: "Java Programming", sub: "Sample Learning Platform", period: "2024" },
+          { heading: "SQL for Data Analysis", sub: "Sample Learning Platform", period: "2024" },
+        ],
+      },
+    ],
+  },
+
+  nursing: {
+    name: "Anjali Nair",
+    contact: [
+      "Kochi, India",
+      "anjali.nair@example.com",
+      "+91 90000 33344",
+    ],
+    sections: [
+      {
+        type: "text",
+        title: "Summary",
+        text: "Registered nurse with 4 years of critical care experience in a medical ICU. Skilled in ventilator care, infusion management and patient education; seeking a staff nurse role in a tertiary care hospital.",
+      },
+      {
+        type: "entries",
+        title: "Licence & Certifications",
+        items: [
+          { heading: "Registered Nurse", sub: "State Nursing Council", period: "Active" },
+          { heading: "Basic Life Support (BLS)", sub: "Sample Resuscitation Council", period: "Valid till 2027" },
+          { heading: "Advanced Cardiac Life Support (ACLS)", sub: "Sample Resuscitation Council", period: "Valid till 2027" },
+        ],
+      },
+      {
+        type: "entries",
+        title: "Clinical Experience",
+        items: [
+          {
+            heading: "Staff Nurse, Medical ICU",
+            sub: "Sample City Hospital (500 beds)",
+            period: "2022 – Present",
+            bullets: [
+              "Provide bedside care for 4 ventilated patients per shift in a 20-bed medical ICU, monitoring vitals and titrating infusions per physician orders.",
+              "Introduced a bedside medication double-check, helping bring reported medication errors down from 5 to 1 per quarter.",
+              "Precepted 6 new graduate nurses through a 4-week orientation on documentation and handover.",
+            ],
+          },
+          {
+            heading: "Staff Nurse, General Medical Ward",
+            sub: "Sample Community Hospital (120 beds)",
+            period: "2021 – 2022",
+            bullets: [
+              "Cared for 8 to 10 patients per shift, with wound care, IV therapy and discharge education.",
+            ],
+          },
+        ],
+      },
+      {
+        type: "skills",
+        title: "Skills",
+        groups: [
+          { label: "Procedures", items: ["IV cannulation", "Wound care", "Ventilator care", "Catheterisation"] },
+          { label: "Monitoring", items: ["Haemodynamic monitoring", "ECG interpretation (basic)"] },
+          { label: "Systems", items: ["Hospital EMR", "Electronic medication records"] },
+        ],
+      },
+      {
+        type: "entries",
+        title: "Education",
+        items: [
+          {
+            heading: "B.Sc. Nursing",
+            sub: "Sample College of Nursing",
+            period: "2017 – 2021",
+          },
+        ],
+      },
+    ],
+  },
 };
