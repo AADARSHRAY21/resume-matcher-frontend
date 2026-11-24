@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import LandingNav from "../components/landing/LandingNav.jsx";
 import { guides, getGuide } from "../data/guides.js";
+import ExampleResume from "../components/ExampleResume.jsx";
+import { exampleResumes } from "../data/exampleResumes.js";
 
 function Block({ title, children }) {
   return (
@@ -28,6 +30,7 @@ function List({ items, mark, markClass }) {
 export default function ResumeGuideDetail() {
   const { slug } = useParams();
   const guide = getGuide(slug);
+  const example = exampleResumes[slug];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -117,6 +120,17 @@ export default function ResumeGuideDetail() {
             Examples show structure only. Use your real numbers and never invent them.
           </p>
         </Block>
+                {example && (
+          <Block title="Example resume">
+            <p className="mb-3 text-sm text-text-muted">
+              A complete sample that follows the section order above.
+            </p>
+            <ExampleResume resume={example} />
+            <p className="mt-3 text-xs text-text-muted">
+              Sample with fictional details. Write your own real ones.
+            </p>
+          </Block>
+        )}
 
         <Block title="Common mistakes">
           <List items={guide.mistakes} mark="✗" markClass="text-red-500" />
